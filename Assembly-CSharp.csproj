@@ -66,6 +66,7 @@
      <Compile Include="Assets\torch\scene\script\TorchSlider.cs" />
      <Compile Include="Assets\torch\scene\script\Torchslider2.cs" />
      <Compile Include="Assets\torch\scripts\Torchelight.cs" />
+     <None Include="Assets\mano21en00lc-modern-closet\Read-me.txt" />
      <None Include="Assets\Enemy\Zombie_01_Free_v01\Docs\Zombie_01_Free_v1_READ_ME.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
      <None Include="Assets\Scripts\maskShader.shader" />

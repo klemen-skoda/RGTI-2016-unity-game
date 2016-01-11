@@ -73,6 +73,7 @@ public class enemyHP : MonoBehaviour
 		StartSinking ();
 		capsuleCollider.isTrigger = true;
 		animator.Play ("death", -1, 0f);
+		GetComponent<AudioSource>().PlayOneShot(deathClip);
 
 		if (healthPack != null) {
 			float x = transform.position.x;
