@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{E6938F01-C647-C5B3-FD0C-F585495AD700}") = "RGTI-2016-unity-game", "Assembly-CSharp-firstpass.csproj", "{AC591A87-4E0F-4A71-C1AE-9A435E992062}"
+EndProject
+Project("{E6938F01-C647-C5B3-FD0C-F585495AD700}") = "RGTI-2016-unity-game", "Assembly-CSharp.csproj", "{6D6AEECE-7134-35C4-33AB-707954639138}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC591A87-4E0F-4A71-C1AE-9A435E992062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC591A87-4E0F-4A71-C1AE-9A435E992062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC591A87-4E0F-4A71-C1AE-9A435E992062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC591A87-4E0F-4A71-C1AE-9A435E992062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6AEECE-7134-35C4-33AB-707954639138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6AEECE-7134-35C4-33AB-707954639138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6AEECE-7134-35C4-33AB-707954639138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6AEECE-7134-35C4-33AB-707954639138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

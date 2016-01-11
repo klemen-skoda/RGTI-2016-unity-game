@@ -11,13 +11,15 @@ public class enemyAttack : MonoBehaviour
 	playerHP playerHealth;
 	enemyHP enemyHealth;
 	float timer;
-	
+
+	Animator animator;
 	
 	void Awake ()
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent <playerHP> ();
 		enemyHealth = GetComponent<enemyHP>();
+		animator = GetComponent<Animator> ();
 	}
 	
 	
@@ -45,13 +47,13 @@ public class enemyAttack : MonoBehaviour
 		
 		if(timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
 		{
-			GetComponent<Animation>().CrossFade("Attack");
+			animator.Play ("attack", -1, 0f);
 			Attack ();
 		}
 
 		if(playerHealth.currentHealth <= 0)
 		{
-			GetComponent<Animation>().CrossFade("Death");
+			animator.Play ("death", -1, 0f);
 		}
 	}
 	

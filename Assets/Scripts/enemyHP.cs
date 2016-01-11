@@ -10,11 +10,12 @@ public class enemyHP : MonoBehaviour
 	public AudioClip deathClip;
 	public AudioClip hit;
 	public GameObject healthPack;
-	
+
 	ParticleSystem hitParticles;
 	CapsuleCollider capsuleCollider;
 	bool isDead;
 	bool isSinking;
+	Animator animator;
 	
 	
 	void Awake ()
@@ -22,6 +23,7 @@ public class enemyHP : MonoBehaviour
 		capsuleCollider = GetComponent <CapsuleCollider> ();
 		currentHealth = startingHealth;
 		hitParticles = GetComponentInChildren <ParticleSystem> ();
+		animator = GetComponent<Animator> ();
 	}
 	
 	
@@ -39,11 +41,24 @@ public class enemyHP : MonoBehaviour
 		if(isDead)
 			return;
 		
+		
 		GetComponent<AudioSource>().PlayOneShot(hit);
 		currentHealth -= amount;
 
 		hitParticles.transform.position = hitPoint;
+
+
+
+
+
+
 		hitParticles.Play();
+		hitParticles.enableEmission = true;
+
+
+		Debug.Log (hitParticles.isPlaying);
+
+
 
 		if(currentHealth <= 0)
 		{
@@ -57,8 +72,7 @@ public class enemyHP : MonoBehaviour
 		isDead = true;
 		StartSinking ();
 		capsuleCollider.isTrigger = true;
-		GetComponent<Animation>().CrossFade ("Death");
-		GetComponent<AudioSource>().PlayOneShot(deathClip);
+		animator.Play ("death", -1, 0f);
 
 		if (healthPack != null) {
 			float x = transform.position.x;
@@ -76,8 +90,12 @@ public class enemyHP : MonoBehaviour
 	{
 		GetComponent <NavMeshAgent> ().enabled = false;
 		GetComponent <Rigidbody> ().isKinematic = true;
-		isSinking = true;
+		//isSinking = true;
 		changeScore.score += scoreValue;
-		Destroy (gameObject, 2f);
+		Debug.Log (this.tag);
+		if (this.tag == "Infector") {
+			Destroy (this.GetComponentInChildren<SkinnedMeshRenderer>(),0.2f);
+		}
+		Destroy (gameObject, 1f);
 	}
 }

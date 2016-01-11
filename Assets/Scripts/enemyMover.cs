@@ -8,6 +8,7 @@ public class enemyMover : MonoBehaviour
 	enemyHP enemyHealth;
 	NavMeshAgent nav;
 	enemyAttack attack;
+	Animator animator;
 	
 	
 	void Awake ()
@@ -17,6 +18,7 @@ public class enemyMover : MonoBehaviour
 		enemyHealth = GetComponent <enemyHP> ();
 		nav = GetComponent <NavMeshAgent> ();
 		attack = GetComponent <enemyAttack> ();
+		animator = GetComponent<Animator> ();
 	}
 	
 	
@@ -27,9 +29,9 @@ public class enemyMover : MonoBehaviour
 			nav.enabled = true;
 			nav.SetDestination (player.position);
 			if (nav.hasPath) {
-				GetComponent<Animation>().CrossFade("Walk");
+				//GetComponent<AudioSource> ().Play ();
 			}else{
-				GetComponent<Animation>().CrossFade("Idle");
+				GetComponent<AudioSource> ().Play ();
 			}
 		}
 		else
