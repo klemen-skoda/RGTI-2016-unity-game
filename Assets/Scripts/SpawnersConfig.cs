@@ -15,6 +15,7 @@ public class SpawnersConfig : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ListSpawners = new List<GameObject> ();
+		addSpawners();
 	
 	}
 	
@@ -28,6 +29,10 @@ public class SpawnersConfig : MonoBehaviour {
 			timeLeft = SpawnTime;
 		}
 	
+	}
+
+	void addSpawners(){
+		ListSpawners.AddRange (GameObject.FindGameObjectsWithTag("Spawn_lvl1"));
 	}
 
 	public static void addSpawner (GameObject tmp){
