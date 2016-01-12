@@ -49,6 +49,8 @@
      <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
      <Compile Include="Assets\Scripts\BoundaryDestroy.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
+     <Compile Include="Assets\Scripts\DiskPickUp.cs" />
+     <Compile Include="Assets\Scripts\KeyPickUp.cs" />
      <Compile Include="Assets\Scripts\OpenDoor.cs" />
      <Compile Include="Assets\Scripts\PickUP.cs" />
      <Compile Include="Assets\Scripts\SetRenderQueue.cs" />

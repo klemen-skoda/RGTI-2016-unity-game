@@ -15,6 +15,10 @@ public class playerHP : MonoBehaviour
 	public AudioClip hurt2;
 	public AudioClip hurt3;
 	public AudioClip healed;
+
+	public bool key3 = false;
+	public bool key2 = false;
+	public bool key1 = false;
 	
 	
 	CharacterController cc;
@@ -54,6 +58,21 @@ public class playerHP : MonoBehaviour
 			if (currentHealth > startingHealth) {
 				currentHealth = startingHealth;
 			}
+		
+	}
+
+	public void pickupKey (int key)
+	{
+		if (key == 1) {
+			key1 = true;
+			GetComponent<AudioSource>().PlayOneShot (healed);
+		} else if (key == 2) {
+			key2 = true;
+			GetComponent<AudioSource>().PlayOneShot (healed);
+		} else if (key == 3) {
+			key3 = true;
+			GetComponent<AudioSource>().PlayOneShot (healed);
+		}
 		
 	}
 
