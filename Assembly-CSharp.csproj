@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\OpenDoor.cs" />
      <Compile Include="Assets\Scripts\PickUP.cs" />
      <Compile Include="Assets\Scripts\SetRenderQueue.cs" />
+     <Compile Include="Assets\Scripts\SpawnersConfig.cs" />
      <Compile Include="Assets\Scripts\changeScore.cs" />
      <Compile Include="Assets\Scripts\collisionManager.cs" />
      <Compile Include="Assets\Scripts\collisionManagerEnable.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\mover.cs" />
      <Compile Include="Assets\Scripts\playerHP.cs" />
      <Compile Include="Assets\Scripts\spawnEnemies.cs" />
+     <Compile Include="Assets\Scripts\swaner_lvl1.cs" />
      <Compile Include="Assets\torch\scene\script\TorchSlider.cs" />
      <Compile Include="Assets\torch\scene\script\Torchslider2.cs" />
      <Compile Include="Assets\torch\scripts\Torchelight.cs" />

@@ -18,7 +18,7 @@ public class destroyBolt : MonoBehaviour {
 			Destroy(gameObject);
 
 			if(other.tag=="Infector"|| other.tag=="Zombie"){
-				Debug.Log (other.tag);
+				//Debug.Log (other.tag);
 
 				enemy = other.GetComponent <enemyHP> ();
 

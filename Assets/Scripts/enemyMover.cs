@@ -29,13 +29,15 @@ public class enemyMover : MonoBehaviour
 			nav.enabled = true;
 			nav.SetDestination (player.position);
 			if (nav.hasPath) {
-				//GetComponent<AudioSource> ().Play ();
+				//GetComponent<AudioSource> ().isPlaying ()
+				//GetComponent<AudioSource> ().Play ();GetComponent<AudioSource> ().Play ();
 			}else{
-				GetComponent<AudioSource> ().Play ();
+				//GetComponent<AudioSource> ().Play ();
 			}
 		}
 		else
 		{
+			GetComponent<AudioSource> ().Play ();
 		    nav.enabled = false;
 		}
 	}

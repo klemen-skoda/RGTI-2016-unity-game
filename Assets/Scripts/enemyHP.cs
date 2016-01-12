@@ -56,7 +56,7 @@ public class enemyHP : MonoBehaviour
 		hitParticles.enableEmission = true;
 
 
-		Debug.Log (hitParticles.isPlaying);
+		//Debug.Log (hitParticles.isPlaying);
 
 
 
@@ -93,7 +93,7 @@ public class enemyHP : MonoBehaviour
 		GetComponent <Rigidbody> ().isKinematic = true;
 		//isSinking = true;
 		changeScore.score += scoreValue;
-		Debug.Log (this.tag);
+		//Debug.Log (this.tag);
 		if (this.tag == "Infector") {
 			Destroy (this.GetComponentInChildren<SkinnedMeshRenderer>(),0.2f);
 		}
