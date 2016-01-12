@@ -37,7 +37,7 @@ public class enemyMover : MonoBehaviour
 		}
 		else
 		{
-			GetComponent<AudioSource> ().Play ();
+			//GetComponent<AudioSource> ().Play ();
 		    nav.enabled = false;
 		}
 	}
