@@ -100,7 +100,11 @@ public class playerHP : MonoBehaviour
 		}
 	}
 	
-	
+	public void playSound ()
+	{
+		GetComponent<AudioSource>().PlayOneShot (healed);
+	}
+
 	void Death ()
 	{
 		isDead = true;

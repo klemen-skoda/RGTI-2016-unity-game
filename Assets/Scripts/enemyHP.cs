@@ -92,7 +92,7 @@ public class enemyHP : MonoBehaviour
 		GetComponent <NavMeshAgent> ().enabled = false;
 		GetComponent <Rigidbody> ().isKinematic = true;
 		//isSinking = true;
-		changeScore.score += scoreValue;
+		changeScore.score += changeScore.multiplier*scoreValue;
 		//Debug.Log (this.tag);
 		if (this.tag == "Infector") {
 			Destroy (this.GetComponentInChildren<SkinnedMeshRenderer>(),0.2f);

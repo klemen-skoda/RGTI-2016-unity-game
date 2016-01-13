@@ -9,7 +9,6 @@ public class DiskPickUp : MonoBehaviour {
 		
 		GameObject player;
 		playerHP playerHealth;
-		public AudioClip pickedDisk;
 		
 		
 		void Awake(){
@@ -28,7 +27,7 @@ public class DiskPickUp : MonoBehaviour {
 			
 			if (other.tag == "Player") {
 				changeScore.multiplier += 1;
-			GetComponent<AudioSource>().PlayOneShot (pickedDisk);
+				playerHealth.playSound();
 				Destroy(gameObject);
 			}
 		}
