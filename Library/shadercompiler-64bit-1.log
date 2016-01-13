@@ -913,3 +913,7 @@ Cmd: compileSnippet
   api=0 type=0 insize=6481 outsize=16595 kw= ok=1
 Cmd: compileSnippet
   api=0 type=1 insize=6481 outsize=6 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1642 outsize=2022 kw=SOFTPARTICLES_ON ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1642 outsize=1599 kw=SOFTPARTICLES_ON ok=1

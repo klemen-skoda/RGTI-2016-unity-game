@@ -64,6 +64,15 @@ public class gameManager : MonoBehaviour {
 
 	}
 
+	public void win(){
+		
+		Time.timeScale = 0;
+		enablePanel ("win");
+		Cursor.visible = true;
+		disableControl ();
+		
+	}
+
 	public void exitGame(){
 		Application.Quit ();
 	}
