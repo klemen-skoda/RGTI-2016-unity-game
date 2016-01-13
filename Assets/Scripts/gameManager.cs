@@ -44,6 +44,7 @@ public class gameManager : MonoBehaviour {
 		Cursor.visible = false;
 		Time.timeScale = 1;
 		enableControll ();
+
 	}
 
 	public void pauseGame(){
