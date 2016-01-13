@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour {
 
@@ -35,8 +35,8 @@ public class gameManager : MonoBehaviour {
 	}
 
 	public void restartGame(){
-		SceneManager.LoadScene ("start scene");
-		//Application.LoadLevel(0);
+		//SceneManager.LoadScene ("start scene");
+		Application.LoadLevel(0);
 	}
 
 	public void startGame(){
