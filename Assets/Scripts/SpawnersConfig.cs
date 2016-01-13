@@ -11,17 +11,32 @@ public class SpawnersConfig : MonoBehaviour {
 	public float timeLeft = 10.0f;
 	public GameObject zombie;
 	public GameObject infector;
+	private int lvl;
 
 	// Use this for initialization
 	void Start () {
 		ListSpawners = new List<GameObject> ();
-		addSpawners();
+		addSpawnersLvl1();
+		lvl = 1;
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (lvl == 1) {
+			if (GameObject.FindGameObjectWithTag ("ForceKEY1") == null) {
+				lvl = 2;
+				addSpawnersLvl2 ();
 
+			}
+		}
+		if (lvl == 2) {
+			if (GameObject.FindGameObjectWithTag ("ForceKEY2") == null) {
+				lvl = 3;
+				addSpawnersLvl3 ();
+
+			}
+		}
 		timeLeft -= Time.deltaTime;
 		if(timeLeft < 0)
 		{
@@ -31,8 +46,18 @@ public class SpawnersConfig : MonoBehaviour {
 	
 	}
 
-	void addSpawners(){
+	void addSpawnersLvl1(){
 		ListSpawners.AddRange (GameObject.FindGameObjectsWithTag("Spawn_lvl1"));
+	}
+	void addSpawnersLvl2(){
+		GameObject[] tmp = GameObject.FindGameObjectsWithTag ("Spawn_lvl2");
+		ListSpawners.AddRange (tmp);
+		spawnPrime(tmp);
+	}
+	void addSpawnersLvl3(){
+		GameObject[] tmp = GameObject.FindGameObjectsWithTag ("Spawn_lvl3");
+		ListSpawners.AddRange (tmp);
+		spawnPrime(tmp);
 	}
 
 	public static void addSpawner (GameObject tmp){
@@ -61,6 +86,25 @@ public class SpawnersConfig : MonoBehaviour {
 			//Debug.Log ("Infector sawned");
 		}
 
+	}
+
+	void spawnPrime(GameObject[] list){
+		for (int i = 0; i < list.Length; i++) {
+			spawnRandomEnemyOnLocation (list [i]);
+		}
+	}
+
+
+	void spawnRandomEnemyOnLocation(GameObject location){
+		int randomEnemy = Random.Range (0, 2);
+		if (randomEnemy == 1) {
+			Instantiate (zombie, location.transform.position, location.transform.rotation);
+			//Debug.Log ("Zombie sawned");
+		} else {
+			Instantiate (infector, location.transform.position, location.transform.rotation);
+
+			//Debug.Log ("Infector sawned");
+		}
 	}
 
 	void spawnZombie(int i){

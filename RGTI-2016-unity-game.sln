@@ -5,10 +5,6 @@ Project("{E6938F01-C647-C5B3-FD0C-F585495AD700}") = "RGTI-2016-unity-game", "Ass
 EndProject
 Project("{E6938F01-C647-C5B3-FD0C-F585495AD700}") = "RGTI-2016-unity-game", "Assembly-CSharp.csproj", "{6D6AEECE-7134-35C4-33AB-707954639138}"
 EndProject
-Project("{E6938F01-C647-C5B3-FD0C-F585495AD700}") = "RGTI-2016-unity-game", "Assembly-UnityScript-firstpass.unityproj", "{712F327D-9875-43F2-E5E4-C65F59CCDAC7}"
-EndProject
-Project("{E6938F01-C647-C5B3-FD0C-F585495AD700}") = "RGTI-2016-unity-game", "Assembly-UnityScript.unityproj", "{AFAE6009-2354-0011-D642-B7B5BAAAEFFC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,14 +19,6 @@ Global
 		{6D6AEECE-7134-35C4-33AB-707954639138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D6AEECE-7134-35C4-33AB-707954639138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D6AEECE-7134-35C4-33AB-707954639138}.Release|Any CPU.Build.0 = Release|Any CPU
-		{712F327D-9875-43F2-E5E4-C65F59CCDAC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{712F327D-9875-43F2-E5E4-C65F59CCDAC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{712F327D-9875-43F2-E5E4-C65F59CCDAC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{712F327D-9875-43F2-E5E4-C65F59CCDAC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AFAE6009-2354-0011-D642-B7B5BAAAEFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFAE6009-2354-0011-D642-B7B5BAAAEFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFAE6009-2354-0011-D642-B7B5BAAAEFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFAE6009-2354-0011-D642-B7B5BAAAEFFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +26,4 @@ Global
 																				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
-
 EndGlobal

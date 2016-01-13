@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour {
 
@@ -34,10 +35,12 @@ public class gameManager : MonoBehaviour {
 	}
 
 	public void restartGame(){
-		Application.LoadLevel (0);
+		SceneManager.LoadScene ("start scene");
+		//Application.LoadLevel(0);
 	}
 
 	public void startGame(){
+
 
 		enablePanel ("hud");
 		selectCamera ("MainCamera");
