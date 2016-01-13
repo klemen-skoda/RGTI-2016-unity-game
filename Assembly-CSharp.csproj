@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\mover.cs" />
      <Compile Include="Assets\Scripts\playerHP.cs" />
      <Compile Include="Assets\Scripts\spawnEnemies.cs" />
+     <Compile Include="Assets\Scripts\spawn_pickups.cs" />
      <Compile Include="Assets\Scripts\swaner_lvl1.cs" />
      <Compile Include="Assets\Scripts\unlockLvL.cs" />
      <Compile Include="Assets\torch\scene\script\TorchSlider.cs" />
